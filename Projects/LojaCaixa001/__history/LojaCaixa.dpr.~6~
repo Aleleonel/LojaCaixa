@@ -6,7 +6,7 @@ uses
   UfrmCadProdutos in 'UfrmCadProdutos.pas' {frmCadProdutos},
   UfrmCadMovimentacao in 'UfrmCadMovimentacao.pas' {frmCadMovimentacao},
   UfrmConsMovimentacoes in 'UfrmConsMovimentacoes.pas' {frmConsMovimentacoes},
-  UDM in 'UDM.pas' {DM: TDataModule};
+  UDM in 'UDM.pas' {DataModule1: TDataModule};
 
 {$R *.res}
 
@@ -17,6 +17,6 @@ begin
   Application.CreateForm(TfrmCadProdutos, frmCadProdutos);
   Application.CreateForm(TfrmCadMovimentacao, frmCadMovimentacao);
   Application.CreateForm(TfrmConsMovimentacoes, frmConsMovimentacoes);
-  Application.CreateForm(TDM, DM);
+  Application.CreateForm(TDataModule1, DataModule1);
   Application.Run;
 end.

@@ -1,0 +1,43 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 429
+  Width = 581
+  object conexao: TFDConnection
+    Params.Strings = (
+      'Database=db_loja'
+      'User_Name=root'
+      'DriverID=MySQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 56
+    Top = 32
+  end
+  object tbProdutos: TFDTable
+    Active = True
+    IndexFieldNames = 'id'
+    Connection = conexao
+    UpdateOptions.UpdateTableName = 'db_loja.produtos'
+    TableName = 'db_loja.produtos'
+    Left = 128
+    Top = 32
+  end
+  object dsProdutos: TDataSource
+    DataSet = tbProdutos
+    Left = 128
+    Top = 88
+  end
+  object tbMovimentacoes: TFDTable
+    Active = True
+    IndexFieldNames = 'id'
+    Connection = conexao
+    UpdateOptions.UpdateTableName = 'db_loja.movimentacoes'
+    TableName = 'db_loja.movimentacoes'
+    Left = 216
+    Top = 32
+  end
+  object dsMovimentacoes: TDataSource
+    DataSet = tbMovimentacoes
+    Left = 216
+    Top = 88
+  end
+end
