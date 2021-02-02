@@ -1,0 +1,43 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 319
+  Width = 331
+  object conexao: TFDConnection
+    Params.Strings = (
+      'Database=db_loja'
+      'User_Name=root'
+      'DriverID=MySQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 48
+    Top = 32
+  end
+  object tb_produtos: TFDTable
+    Active = True
+    IndexFieldNames = 'id'
+    Connection = conexao
+    UpdateOptions.UpdateTableName = 'db_loja.produtos'
+    TableName = 'db_loja.produtos'
+    Left = 48
+    Top = 112
+  end
+  object ds_produtos: TDataSource
+    DataSet = tb_produtos
+    Left = 120
+    Top = 112
+  end
+  object tb_preco: TFDTable
+    Active = True
+    IndexFieldNames = 'id'
+    Connection = conexao
+    UpdateOptions.UpdateTableName = 'db_loja.preco'
+    TableName = 'db_loja.preco'
+    Left = 48
+    Top = 184
+  end
+  object ds_preco: TDataSource
+    DataSet = tb_preco
+    Left = 128
+    Top = 184
+  end
+end

@@ -13,32 +13,76 @@ object Form1: TForm1
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object PageControl1: TPageControl
-    Left = 0
-    Top = 0
-    Width = 796
-    Height = 510
-    ActivePage = TabSheet1
-    Align = alClient
+  object Label2: TLabel
+    Left = 40
+    Top = 173
+    Width = 51
+    Height = 13
+    Caption = 'Fonecedor'
+  end
+  object Label3: TLabel
+    Left = 40
+    Top = 109
+    Width = 27
+    Height = 13
+    Caption = 'Nome'
+  end
+  object Label1: TLabel
+    Left = 40
+    Top = 237
+    Width = 40
+    Height = 13
+    Caption = 'Validade'
+  end
+  object Label4: TLabel
+    Left = 304
+    Top = 109
+    Width = 27
+    Height = 13
+    Caption = 'Pre'#231'o'
+  end
+  object DBEdit1: TDBEdit
+    Left = 40
+    Top = 128
+    Width = 225
+    Height = 21
+    DataField = 'nome'
+    DataSource = DataModule1.ds_produtos
     TabOrder = 0
-    object TabSheet1: TTabSheet
-      Caption = 'Principal'
-    end
-    object TabSheet2: TTabSheet
-      Caption = 'Clientes'
-      ImageIndex = 1
-    end
-    object TabSheet3: TTabSheet
-      Caption = 'Produtos'
-      ImageIndex = 2
-    end
-    object TabSheet4: TTabSheet
-      Caption = 'Estoque'
-      ImageIndex = 3
-    end
-    object Caixa: TTabSheet
-      Caption = 'Caixa'
-      ImageIndex = 4
-    end
+  end
+  object DBEdit2: TDBEdit
+    Left = 304
+    Top = 128
+    Width = 121
+    Height = 21
+    DataField = 'preco'
+    DataSource = DataModule1.ds_produtos
+    TabOrder = 1
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 40
+    Top = 64
+    Width = 240
+    Height = 25
+    DataSource = DataModule1.ds_produtos
+    TabOrder = 2
+  end
+  object DBEdit3: TDBEdit
+    Left = 40
+    Top = 192
+    Width = 225
+    Height = 21
+    DataField = 'fornecedor'
+    DataSource = DataModule1.ds_produtos
+    TabOrder = 3
+  end
+  object DBEdit5: TDBEdit
+    Left = 40
+    Top = 256
+    Width = 225
+    Height = 21
+    DataField = 'validade'
+    DataSource = DataModule1.ds_produtos
+    TabOrder = 4
   end
 end

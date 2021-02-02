@@ -1,0 +1,41 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'SGC - Sistemas Gerenciador Clientes'
+  ClientHeight = 510
+  ClientWidth = 796
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBEdit1: TDBEdit
+    Left = 40
+    Top = 128
+    Width = 225
+    Height = 21
+    DataField = 'nome'
+    DataSource = DataModule1.ds_produtos
+    TabOrder = 0
+  end
+  object DBEdit2: TDBEdit
+    Left = 304
+    Top = 128
+    Width = 121
+    Height = 21
+    DataSource = DataModule1.ds_precos
+    TabOrder = 1
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 40
+    Top = 64
+    Width = 240
+    Height = 25
+    DataSource = DataModule1.ds_produtos
+    TabOrder = 2
+  end
+end

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2021/02/02 12:21:05.385,=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/02 12:22:49.943,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UPrincipal.dfm=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/02/02 12:22:49.943,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UPrincipal.pas=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/02 12:23:18.168,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\LojaCaixa.dproj=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/02/02 12:28:28.806,=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
+    <Transaction>2021/02/02 12:29:41.211,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UfrmCadProdutos.dfm=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.dfm</Transaction>
+    <Transaction>2021/02/02 12:29:41.211,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UfrmCadProdutos.pas=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
+    <Transaction>2021/02/02 13:24:12.808,=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
+    <Transaction>2021/02/02 13:25:33.121,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UfrmCadMovimentacao.dfm=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.dfm</Transaction>
+    <Transaction>2021/02/02 13:25:33.121,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UfrmCadMovimentacao.pas=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
+    <Transaction>2021/02/02 13:26:01.623,=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
+    <Transaction>2021/02/02 13:26:58.200,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UfrmConsMovimentacoes.dfm=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.dfm</Transaction>
+    <Transaction>2021/02/02 13:26:58.200,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UfrmConsMovimentacoes.pas=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
