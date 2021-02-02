@@ -20,6 +20,33 @@ object DM: TDM
     TableName = 'db_loja.produtos'
     Left = 128
     Top = 32
+    object tbProdutosid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+    end
+    object tbProdutosnome: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'nome'
+      Origin = 'nome'
+      Size = 30
+    end
+    object tbProdutosfabricante: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'fabricante'
+      Origin = 'fabricante'
+      Size = 30
+    end
+    object tbProdutosvalidade: TDateField
+      AutoGenerateValue = arDefault
+      FieldName = 'validade'
+      Origin = 'validade'
+      EditMask = '##/##/####;1;_'
+    end
+    object tbProdutosestoqueAtual: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'estoqueAtual'
+      Origin = 'estoqueAtual'
+    end
   end
   object dsProdutos: TDataSource
     DataSet = tbProdutos
