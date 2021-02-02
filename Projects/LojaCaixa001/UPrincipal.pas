@@ -33,7 +33,7 @@ implementation
 
 {$R *.dfm}
 
-uses UfrmCadProdutos, UfrmCadMovimentacao;
+uses UfrmCadProdutos, UfrmCadMovimentacao, UfrmConsMovimentacoes;
 
 procedure TfrmPrincipal.ConsultarMovimentaes1Click(Sender: TObject);
 begin
