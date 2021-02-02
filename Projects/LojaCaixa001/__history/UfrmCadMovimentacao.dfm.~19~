@@ -5,7 +5,7 @@ object frmCadMovimentacao: TfrmCadMovimentacao
   BorderStyle = bsSingle
   Caption = 'Cadastro de Movimenta'#231#227'o'
   ClientHeight = 575
-  ClientWidth = 1019
+  ClientWidth = 1194
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -81,6 +81,19 @@ object frmCadMovimentacao: TfrmCadMovimentacao
     Font.Style = []
     ParentFont = False
   end
+  object Label6: TLabel
+    Left = 872
+    Top = 81
+    Width = 221
+    Height = 19
+    Caption = 'Produtos da Movimenta'#231#227'o'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object DBComboBox1: TDBComboBox
     Left = 24
     Top = 160
@@ -103,7 +116,7 @@ object frmCadMovimentacao: TfrmCadMovimentacao
   object DBEdit1: TDBEdit
     Left = 24
     Top = 216
-    Width = 145
+    Width = 169
     Height = 27
     DataField = 'dataHora'
     DataSource = DM.dsMovimentacoes
@@ -118,7 +131,7 @@ object frmCadMovimentacao: TfrmCadMovimentacao
   object DBEdit2: TDBEdit
     Left = 24
     Top = 275
-    Width = 145
+    Width = 169
     Height = 27
     DataField = 'responsavel'
     DataSource = DM.dsMovimentacoes
@@ -135,7 +148,7 @@ object frmCadMovimentacao: TfrmCadMovimentacao
     Top = 336
     Width = 309
     Height = 113
-    DataField = 'responsavel'
+    DataField = 'observacoes'
     DataSource = DM.dsMovimentacoes
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -148,8 +161,66 @@ object frmCadMovimentacao: TfrmCadMovimentacao
   object DBNavigator1: TDBNavigator
     Left = 24
     Top = 73
-    Width = 300
+    Width = 304
     Height = 40
+    DataSource = DM.dsMovimentacoes
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbPost, nbCancel]
     TabOrder = 4
+    OnClick = DBNavigator1Click
+  end
+  object DBGrid1: TDBGrid
+    Left = 352
+    Top = 160
+    Width = 441
+    Height = 289
+    DataSource = DM.dsMovimentacoes
+    TabOrder = 5
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'tipo'
+        Title.Caption = 'TIPO'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -13
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'dataHora'
+        Title.Caption = 'DATA/HORA'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -13
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'responsavel'
+        Title.Caption = 'RESPONS'#193'VEL'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -13
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end>
+  end
+  object DBNavigator2: TDBNavigator
+    Left = 872
+    Top = 112
+    Width = 220
+    Height = 33
+    VisibleButtons = [nbInsert, nbDelete, nbPost, nbCancel]
+    TabOrder = 6
   end
 end

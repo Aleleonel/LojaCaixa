@@ -82,8 +82,8 @@ object frmCadMovimentacao: TfrmCadMovimentacao
     ParentFont = False
   end
   object Label6: TLabel
-    Left = 808
-    Top = 67
+    Left = 872
+    Top = 81
     Width = 221
     Height = 19
     Caption = 'Produtos da Movimenta'#231#227'o'
@@ -93,46 +93,6 @@ object frmCadMovimentacao: TfrmCadMovimentacao
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-  end
-  object Label7: TLabel
-    Left = 808
-    Top = 436
-    Width = 115
-    Height = 16
-    Caption = 'Total de Produtos'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
-  end
-  object txtTotaldeProdutos: TLabel
-    Left = 952
-    Top = 436
-    Width = 16
-    Height = 16
-    Caption = '00'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
-  end
-  object Label8: TLabel
-    Left = 808
-    Top = 141
-    Width = 86
-    Height = 13
-    Caption = 'Escolha o produto'
-  end
-  object Label9: TLabel
-    Left = 998
-    Top = 141
-    Width = 56
-    Height = 13
-    Caption = 'Quantidade'
   end
   object DBComboBox1: TDBComboBox
     Left = 24
@@ -256,37 +216,11 @@ object frmCadMovimentacao: TfrmCadMovimentacao
       end>
   end
   object DBNavigator2: TDBNavigator
-    Left = 808
-    Top = 92
-    Width = 220
+    Left = 872
+    Top = 112
+    Width = 208
     Height = 33
     VisibleButtons = [nbInsert, nbDelete, nbPost, nbCancel]
     TabOrder = 6
-  end
-  object DBLookupComboBox1: TDBLookupComboBox
-    Left = 808
-    Top = 160
-    Width = 181
-    Height = 21
-    TabOrder = 7
-  end
-  object DBEdit3: TDBEdit
-    Left = 995
-    Top = 160
-    Width = 133
-    Height = 21
-    TabOrder = 8
-  end
-  object DBGrid2: TDBGrid
-    Left = 808
-    Top = 197
-    Width = 320
-    Height = 220
-    TabOrder = 9
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'Tahoma'
-    TitleFont.Style = []
   end
 end

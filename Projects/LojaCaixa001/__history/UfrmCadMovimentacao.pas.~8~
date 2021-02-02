@@ -22,13 +22,6 @@ type
     DBGrid1: TDBGrid;
     DBNavigator2: TDBNavigator;
     Label6: TLabel;
-    DBLookupComboBox1: TDBLookupComboBox;
-    DBEdit3: TDBEdit;
-    DBGrid2: TDBGrid;
-    Label7: TLabel;
-    txtTotaldeProdutos: TLabel;
-    Label8: TLabel;
-    Label9: TLabel;
     procedure DBNavigator1Click(Sender: TObject; Button: TNavigateBtn);
   private
     { Private declarations }

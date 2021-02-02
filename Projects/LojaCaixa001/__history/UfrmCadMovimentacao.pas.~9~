@@ -27,8 +27,6 @@ type
     DBGrid2: TDBGrid;
     Label7: TLabel;
     txtTotaldeProdutos: TLabel;
-    Label8: TLabel;
-    Label9: TLabel;
     procedure DBNavigator1Click(Sender: TObject; Button: TNavigateBtn);
   private
     { Private declarations }

@@ -120,20 +120,6 @@ object frmCadMovimentacao: TfrmCadMovimentacao
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object Label8: TLabel
-    Left = 808
-    Top = 141
-    Width = 86
-    Height = 13
-    Caption = 'Escolha o produto'
-  end
-  object Label9: TLabel
-    Left = 998
-    Top = 141
-    Width = 56
-    Height = 13
-    Caption = 'Quantidade'
-  end
   object DBComboBox1: TDBComboBox
     Left = 24
     Top = 160
