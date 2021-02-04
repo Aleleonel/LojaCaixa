@@ -23,6 +23,7 @@ object DM: TDM
     object tbProdutosid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
+      ReadOnly = True
     end
     object tbProdutosnome: TStringField
       AutoGenerateValue = arDefault
@@ -69,7 +70,9 @@ object DM: TDM
   end
   object tbMovProdutos: TFDTable
     Active = True
-    IndexFieldNames = 'id'
+    IndexName = 'idmovimentacao'
+    MasterSource = dsMovimentacoes
+    MasterFields = 'id'
     Connection = conexao
     UpdateOptions.UpdateTableName = 'db_loja.movimentacoes_produtos'
     TableName = 'db_loja.movimentacoes_produtos'

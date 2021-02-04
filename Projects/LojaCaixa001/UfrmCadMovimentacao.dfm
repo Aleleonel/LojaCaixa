@@ -260,6 +260,7 @@ object frmCadMovimentacao: TfrmCadMovimentacao
     Top = 92
     Width = 220
     Height = 33
+    DataSource = DM.dsMovProdutos
     VisibleButtons = [nbInsert, nbDelete, nbPost, nbCancel]
     TabOrder = 6
   end
@@ -268,6 +269,11 @@ object frmCadMovimentacao: TfrmCadMovimentacao
     Top = 160
     Width = 181
     Height = 21
+    DataField = 'idproduto'
+    DataSource = DM.dsMovProdutos
+    KeyField = 'id'
+    ListField = 'nome'
+    ListSource = DM.dsProdutos
     TabOrder = 7
   end
   object DBEdit3: TDBEdit
@@ -275,6 +281,8 @@ object frmCadMovimentacao: TfrmCadMovimentacao
     Top = 160
     Width = 133
     Height = 21
+    DataField = 'qtd'
+    DataSource = DM.dsMovProdutos
     TabOrder = 8
   end
   object DBGrid2: TDBGrid
@@ -282,11 +290,37 @@ object frmCadMovimentacao: TfrmCadMovimentacao
     Top = 197
     Width = 320
     Height = 220
+    DataSource = DM.dsMovProdutos
     TabOrder = 9
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'idproduto'
+        Title.Caption = 'PRODUTO'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -13
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 205
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'qtd'
+        Title.Caption = 'QUANTIDADE'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -13
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 95
+        Visible = True
+      end>
   end
 end
