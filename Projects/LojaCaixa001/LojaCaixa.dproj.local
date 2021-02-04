@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2021/02/02 12:21:05.385,=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2021/02/02 12:22:49.943,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UPrincipal.dfm=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2021/02/02 12:22:49.943,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UPrincipal.pas=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2021/02/02 12:23:18.168,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\LojaCaixa.dproj=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2021/02/02 12:28:28.806,=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
-    <Transaction>2021/02/02 12:29:41.211,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UfrmCadProdutos.pas=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
-    <Transaction>2021/02/02 12:29:41.211,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UfrmCadProdutos.dfm=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.dfm</Transaction>
-    <Transaction>2021/02/02 13:24:12.808,=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
-    <Transaction>2021/02/02 13:25:33.121,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UfrmCadMovimentacao.dfm=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.dfm</Transaction>
-    <Transaction>2021/02/02 13:25:33.121,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UfrmCadMovimentacao.pas=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
-    <Transaction>2021/02/02 13:26:01.623,=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
-    <Transaction>2021/02/02 13:26:58.200,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UfrmConsMovimentacoes.dfm=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.dfm</Transaction>
-    <Transaction>2021/02/02 13:26:58.200,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UfrmConsMovimentacoes.pas=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
-    <Transaction>2021/02/02 13:44:41.942,=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
-    <Transaction>2021/02/02 13:50:24.345,=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
-    <Transaction>2021/02/02 13:50:43.779,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UDM.pas=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
-    <Transaction>2021/02/02 13:50:43.779,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UDM.dfm=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.dfm</Transaction>
+	<Transactions>
+    <Transaction>2021/02/02 12:21:05.000.385,=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/02 12:22:49.000.943,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UPrincipal.dfm</Transaction>
+    <Transaction>2021/02/02 12:22:49.000.943,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UPrincipal.pas</Transaction>
+    <Transaction>2021/02/02 12:23:18.000.168,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\LojaCaixa.dproj</Transaction>
+    <Transaction>2021/02/02 12:28:28.000.806,=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
+    <Transaction>2021/02/02 12:29:41.000.211,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UfrmCadProdutos.pas</Transaction>
+    <Transaction>2021/02/02 12:29:41.000.211,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.dfm=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UfrmCadProdutos.dfm</Transaction>
+    <Transaction>2021/02/02 13:24:12.000.808,=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
+    <Transaction>2021/02/02 13:25:33.000.121,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UfrmCadMovimentacao.pas</Transaction>
+    <Transaction>2021/02/02 13:25:33.000.121,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.dfm=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UfrmCadMovimentacao.dfm</Transaction>
+    <Transaction>2021/02/02 13:26:01.000.623,=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
+    <Transaction>2021/02/02 13:26:58.000.200,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.dfm=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UfrmConsMovimentacoes.dfm</Transaction>
+    <Transaction>2021/02/02 13:26:58.000.200,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UfrmConsMovimentacoes.pas</Transaction>
+    <Transaction>2021/02/02 13:44:41.000.942,=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
+    <Transaction>2021/02/02 13:50:24.000.345,=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas</Transaction>
+    <Transaction>2021/02/02 13:50:43.000.779,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.dfm=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UDM.dfm</Transaction>
+    <Transaction>2021/02/02 13:50:43.000.779,C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\Unit1.pas=C:\Users\LOMAEVENTOS\Documents\Embarcadero\Studio\Projects\LojaCaixa001\UDM.pas</Transaction>
   </Transactions>
 </BorlandProject>

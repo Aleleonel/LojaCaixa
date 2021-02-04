@@ -56,6 +56,7 @@ object DM: TDM
   end
   object tbMovimentacoes: TFDTable
     Active = True
+    AfterScroll = tbMovimentacoesAfterScroll
     IndexFieldNames = 'id'
     Connection = conexao
     UpdateOptions.UpdateTableName = 'db_loja.movimentacoes'
@@ -70,6 +71,8 @@ object DM: TDM
   end
   object tbMovProdutos: TFDTable
     Active = True
+    AfterPost = tbMovProdutosAfterPost
+    AfterDelete = tbMovProdutosAfterDelete
     IndexName = 'idmovimentacao'
     MasterSource = dsMovimentacoes
     MasterFields = 'id'
@@ -78,6 +81,35 @@ object DM: TDM
     TableName = 'db_loja.movimentacoes_produtos'
     Left = 344
     Top = 32
+    object tbMovProdutosid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+    end
+    object tbMovProdutosidmovimentacao: TIntegerField
+      FieldName = 'idmovimentacao'
+      Origin = 'idmovimentacao'
+      Required = True
+    end
+    object tbMovProdutosidproduto: TIntegerField
+      FieldName = 'idproduto'
+      Origin = 'idproduto'
+      Required = True
+    end
+    object tbMovProdutosqtd: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'qtd'
+      Origin = 'qtd'
+    end
+    object tbMovProdutosnomeProduto: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nomeProduto'
+      LookupDataSet = tbProdutos
+      LookupKeyFields = 'id'
+      LookupResultField = 'nome'
+      KeyFields = 'idproduto'
+      Size = 50
+      Lookup = True
+    end
   end
   object dsMovProdutos: TDataSource
     DataSet = tbMovProdutos

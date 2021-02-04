@@ -82,7 +82,7 @@ object frmCadMovimentacao: TfrmCadMovimentacao
     ParentFont = False
   end
   object Label6: TLabel
-    Left = 808
+    Left = 848
     Top = 67
     Width = 221
     Height = 19
@@ -95,8 +95,8 @@ object frmCadMovimentacao: TfrmCadMovimentacao
     ParentFont = False
   end
   object Label7: TLabel
-    Left = 808
-    Top = 436
+    Left = 848
+    Top = 433
     Width = 115
     Height = 16
     Caption = 'Total de Produtos'
@@ -108,8 +108,8 @@ object frmCadMovimentacao: TfrmCadMovimentacao
     ParentFont = False
   end
   object txtTotaldeProdutos: TLabel
-    Left = 952
-    Top = 436
+    Left = 992
+    Top = 433
     Width = 16
     Height = 16
     Caption = '00'
@@ -121,15 +121,15 @@ object frmCadMovimentacao: TfrmCadMovimentacao
     ParentFont = False
   end
   object Label8: TLabel
-    Left = 808
-    Top = 141
+    Left = 848
+    Top = 146
     Width = 86
     Height = 13
     Caption = 'Escolha o produto'
   end
   object Label9: TLabel
-    Left = 998
-    Top = 141
+    Left = 1068
+    Top = 146
     Width = 56
     Height = 13
     Caption = 'Quantidade'
@@ -256,18 +256,18 @@ object frmCadMovimentacao: TfrmCadMovimentacao
       end>
   end
   object DBNavigator2: TDBNavigator
-    Left = 808
+    Left = 848
     Top = 92
-    Width = 220
+    Width = 312
     Height = 33
     DataSource = DM.dsMovProdutos
     VisibleButtons = [nbInsert, nbDelete, nbPost, nbCancel]
     TabOrder = 6
   end
   object DBLookupComboBox1: TDBLookupComboBox
-    Left = 808
-    Top = 160
-    Width = 181
+    Left = 848
+    Top = 165
+    Width = 214
     Height = 21
     DataField = 'idproduto'
     DataSource = DM.dsMovProdutos
@@ -277,18 +277,18 @@ object frmCadMovimentacao: TfrmCadMovimentacao
     TabOrder = 7
   end
   object DBEdit3: TDBEdit
-    Left = 995
-    Top = 160
-    Width = 133
+    Left = 1068
+    Top = 165
+    Width = 93
     Height = 21
     DataField = 'qtd'
     DataSource = DM.dsMovProdutos
     TabOrder = 8
   end
   object DBGrid2: TDBGrid
-    Left = 808
+    Left = 848
     Top = 197
-    Width = 320
+    Width = 313
     Height = 220
     DataSource = DM.dsMovProdutos
     TabOrder = 9
@@ -300,14 +300,14 @@ object frmCadMovimentacao: TfrmCadMovimentacao
     Columns = <
       item
         Expanded = False
-        FieldName = 'idproduto'
-        Title.Caption = 'PRODUTO'
+        FieldName = 'nomeProduto'
+        Title.Caption = 'NOME PRODUTO'
         Title.Font.Charset = DEFAULT_CHARSET
         Title.Font.Color = clWindowText
         Title.Font.Height = -13
         Title.Font.Name = 'Tahoma'
         Title.Font.Style = [fsBold]
-        Width = 205
+        Width = 169
         Visible = True
       end
       item
@@ -319,7 +319,7 @@ object frmCadMovimentacao: TfrmCadMovimentacao
         Title.Font.Height = -13
         Title.Font.Name = 'Tahoma'
         Title.Font.Style = [fsBold]
-        Width = 95
+        Width = 111
         Visible = True
       end>
   end
