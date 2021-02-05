@@ -1,0 +1,121 @@
+object frmConsMovimentacoes: TfrmConsMovimentacoes
+  Left = 0
+  Top = 0
+  Caption = 'Consulta de Movimenta'#231#245'es'
+  ClientHeight = 547
+  ClientWidth = 719
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label4: TLabel
+    Left = 24
+    Top = 504
+    Width = 101
+    Height = 13
+    Caption = 'Total Movimenta'#231#245'es'
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 719
+    Height = 89
+    Align = alTop
+    TabOrder = 0
+    ExplicitWidth = 955
+    object Label1: TLabel
+      Left = 24
+      Top = 28
+      Width = 271
+      Height = 25
+      Caption = 'Consultar Movimenta'#231#245'es'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 89
+    Width = 719
+    Height = 88
+    Align = alTop
+    TabOrder = 1
+    ExplicitTop = 95
+    ExplicitWidth = 955
+    object Label2: TLabel
+      Left = 24
+      Top = 21
+      Width = 53
+      Height = 13
+      Caption = 'Data Inicial'
+    end
+    object Label3: TLabel
+      Left = 176
+      Top = 21
+      Width = 48
+      Height = 13
+      Caption = 'Data Final'
+    end
+    object txtDataInicial: TMaskEdit
+      Left = 24
+      Top = 40
+      Width = 73
+      Height = 21
+      EditMask = '##/##/####;1;_'
+      MaxLength = 10
+      TabOrder = 0
+      Text = '  /  /    '
+    end
+    object txtDataFinal: TMaskEdit
+      Left = 176
+      Top = 40
+      Width = 73
+      Height = 21
+      EditMask = '##/##/####;1;_'
+      MaxLength = 10
+      TabOrder = 1
+      Text = '  /  /    '
+    end
+    object btConsultar: TButton
+      Left = 272
+      Top = 32
+      Width = 161
+      Height = 33
+      Caption = 'Consultar Movimenta'#231#245'es'
+      TabOrder = 2
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 24
+    Top = 200
+    Width = 320
+    Height = 289
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DBGrid2: TDBGrid
+    Left = 376
+    Top = 200
+    Width = 320
+    Height = 289
+    TabOrder = 3
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+end

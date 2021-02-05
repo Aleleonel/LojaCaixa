@@ -2,8 +2,8 @@ object frmConsMovimentacoes: TfrmConsMovimentacoes
   Left = 0
   Top = 0
   Caption = 'Consulta de Movimenta'#231#245'es'
-  ClientHeight = 547
-  ClientWidth = 955
+  ClientHeight = 521
+  ClientWidth = 697
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,19 +13,46 @@ object frmConsMovimentacoes: TfrmConsMovimentacoes
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
+  object Label4: TLabel
+    Left = 24
+    Top = 480
+    Width = 174
+    Height = 19
+    Caption = 'Total Movimenta'#231#245'es'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lblTotal: TLabel
+    Left = 216
+    Top = 480
+    Width = 20
+    Height = 19
+    Caption = '00'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 955
+    Width = 697
     Height = 89
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 955
     object Label1: TLabel
       Left = 24
       Top = 28
-      Width = 287
+      Width = 271
       Height = 25
-      Caption = 'Consultar NMovimenta'#231#245'es'
+      Caption = 'Consultar Movimenta'#231#245'es'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -21
@@ -37,19 +64,135 @@ object frmConsMovimentacoes: TfrmConsMovimentacoes
   object Panel2: TPanel
     Left = 0
     Top = 89
-    Width = 955
-    Height = 88
+    Width = 697
+    Height = 64
     Align = alTop
     TabOrder = 1
-    object MaskEdit1: TMaskEdit
+    ExplicitWidth = 719
+    object Label2: TLabel
       Left = 24
-      Top = 24
-      Width = 120
+      Top = 6
+      Width = 53
+      Height = 13
+      Caption = 'Data Inicial'
+    end
+    object Label3: TLabel
+      Left = 176
+      Top = 6
+      Width = 48
+      Height = 13
+      Caption = 'Data Final'
+    end
+    object txtDataInicial: TMaskEdit
+      Left = 24
+      Top = 25
+      Width = 73
       Height = 21
       EditMask = '##/##/####;1;_'
       MaxLength = 10
       TabOrder = 0
       Text = '  /  /    '
     end
+    object txtDataFinal: TMaskEdit
+      Left = 176
+      Top = 25
+      Width = 73
+      Height = 21
+      EditMask = '##/##/####;1;_'
+      MaxLength = 10
+      TabOrder = 1
+      Text = '  /  /    '
+    end
+    object btConsultar: TButton
+      Left = 272
+      Top = 16
+      Width = 161
+      Height = 33
+      Caption = 'Consultar Movimenta'#231#245'es'
+      TabOrder = 2
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 24
+    Top = 168
+    Width = 320
+    Height = 289
+    DataSource = DM.dsSqlMovimentacoes
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'tipo'
+        Title.Caption = 'TIPO'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 93
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'dataHora'
+        Title.Caption = 'DATA/HORA'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 119
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'responsavel'
+        Title.Caption = 'RESPONS'#193'VEL'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end>
+  end
+  object DBGrid2: TDBGrid
+    Left = 360
+    Top = 168
+    Width = 320
+    Height = 289
+    DataSource = DM.dsSqlMovProdutos
+    TabOrder = 3
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'idmovimentacao'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'idproduto'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'qtd'
+        Visible = True
+      end>
   end
 end

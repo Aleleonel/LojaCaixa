@@ -1,7 +1,7 @@
 object DM: TDM
   OldCreateOrder = False
-  Height = 429
-  Width = 581
+  Height = 346
+  Width = 537
   object conexao: TFDConnection
     Params.Strings = (
       'Database=db_loja'
@@ -23,7 +23,6 @@ object DM: TDM
     object tbProdutosid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
-      ReadOnly = True
     end
     object tbProdutosnome: TStringField
       AutoGenerateValue = arDefault
@@ -41,12 +40,11 @@ object DM: TDM
       AutoGenerateValue = arDefault
       FieldName = 'validade'
       Origin = 'validade'
-      EditMask = '##/##/####;1;_'
     end
     object tbProdutosestoqueAtual: TIntegerField
-      AutoGenerateValue = arDefault
       FieldName = 'estoqueAtual'
       Origin = 'estoqueAtual'
+      Required = True
     end
   end
   object dsProdutos: TDataSource
@@ -125,8 +123,8 @@ object DM: TDM
       
         'UPDATE produtos SET estoqueAtual = estoqueAtual + pQtd WHERE id ' +
         '= pId')
-    Left = 128
-    Top = 184
+    Left = 56
+    Top = 176
   end
   object sqlDiminuiEstoque: TFDCommand
     Connection = conexao
@@ -143,20 +141,36 @@ object DM: TDM
         Name = 'pId'
         ParamType = ptInput
       end>
-    Left = 136
-    Top = 248
+    Left = 56
+    Top = 232
   end
   object sqlMovimentacoes: TFDQuery
     Active = True
     Connection = conexao
     SQL.Strings = (
       'SELECT * FROM movimentacoes')
-    Left = 264
-    Top = 184
+    Left = 240
+    Top = 176
   end
   object dsSqlMovimentacoes: TDataSource
     DataSet = sqlMovimentacoes
-    Left = 264
-    Top = 248
+    Left = 240
+    Top = 232
+  end
+  object sqlMovProdutos: TFDQuery
+    Active = True
+    IndexFieldNames = 'idmovimentacao'
+    MasterSource = dsSqlMovimentacoes
+    MasterFields = 'id'
+    Connection = conexao
+    SQL.Strings = (
+      'SELECT * FROM movimentacoes_produtos')
+    Left = 376
+    Top = 176
+  end
+  object dsSqlMovProdutos: TDataSource
+    DataSet = sqlMovProdutos
+    Left = 376
+    Top = 232
   end
 end
