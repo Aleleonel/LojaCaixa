@@ -56,6 +56,7 @@ object DM: TDM
   end
   object tbMovimentacoes: TFDTable
     Active = True
+    BeforeDelete = tbMovimentacoesBeforeDelete
     AfterScroll = tbMovimentacoesAfterScroll
     IndexFieldNames = 'id'
     Connection = conexao
@@ -72,6 +73,7 @@ object DM: TDM
   object tbMovProdutos: TFDTable
     Active = True
     AfterPost = tbMovProdutosAfterPost
+    BeforeDelete = tbMovProdutosBeforeDelete
     AfterDelete = tbMovProdutosAfterDelete
     IndexName = 'idmovimentacao'
     MasterSource = dsMovimentacoes
@@ -84,6 +86,7 @@ object DM: TDM
     object tbMovProdutosid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
+      ReadOnly = True
     end
     object tbMovProdutosidmovimentacao: TIntegerField
       FieldName = 'idmovimentacao'
@@ -118,24 +121,27 @@ object DM: TDM
   end
   object sqlAumentaEstoque: TFDCommand
     Connection = conexao
-    ParamData = <
-      item
-        Name = 'pId'
-      end
-      item
-        Name = 'pQtd'
-      end>
+    CommandText.Strings = (
+      
+        'UPDATE produtos SET estoqueAtual = estoqueAtual + pQtd WHERE id ' +
+        '= pId')
     Left = 128
     Top = 184
   end
   object sqlDiminuiEstoque: TFDCommand
     Connection = conexao
+    CommandText.Strings = (
+      
+        'UPDATE produtos SET estoqueAtual = estoqueAtual - :pQtd WHERE id' +
+        ' = :pId')
     ParamData = <
       item
-        Name = 'pId'
+        Name = 'pQtd'
+        ParamType = ptInput
       end
       item
-        Name = 'pQtd'
+        Name = 'pId'
+        ParamType = ptInput
       end>
     Left = 136
     Top = 248

@@ -14,12 +14,13 @@ object frmCadProdutos: TfrmCadProdutos
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 24
     Top = 32
-    Width = 273
+    Width = 257
     Height = 29
     Caption = 'Cadastro de Produtos'
     Font.Charset = DEFAULT_CHARSET

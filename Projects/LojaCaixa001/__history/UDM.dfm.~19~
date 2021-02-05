@@ -1,0 +1,161 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 429
+  Width = 581
+  object conexao: TFDConnection
+    Params.Strings = (
+      'Database=db_loja'
+      'User_Name=root'
+      'DriverID=MySQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 56
+    Top = 32
+  end
+  object tbProdutos: TFDTable
+    Active = True
+    IndexFieldNames = 'id'
+    Connection = conexao
+    UpdateOptions.UpdateTableName = 'db_loja.produtos'
+    TableName = 'db_loja.produtos'
+    Left = 128
+    Top = 32
+    object tbProdutosid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ReadOnly = True
+    end
+    object tbProdutosnome: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'nome'
+      Origin = 'nome'
+      Size = 30
+    end
+    object tbProdutosfabricante: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'fabricante'
+      Origin = 'fabricante'
+      Size = 30
+    end
+    object tbProdutosvalidade: TDateField
+      AutoGenerateValue = arDefault
+      FieldName = 'validade'
+      Origin = 'validade'
+      EditMask = '##/##/####;1;_'
+    end
+    object tbProdutosestoqueAtual: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'estoqueAtual'
+      Origin = 'estoqueAtual'
+    end
+  end
+  object dsProdutos: TDataSource
+    DataSet = tbProdutos
+    Left = 128
+    Top = 88
+  end
+  object tbMovimentacoes: TFDTable
+    Active = True
+    AfterScroll = tbMovimentacoesAfterScroll
+    IndexFieldNames = 'id'
+    Connection = conexao
+    UpdateOptions.UpdateTableName = 'db_loja.movimentacoes'
+    TableName = 'db_loja.movimentacoes'
+    Left = 240
+    Top = 32
+  end
+  object dsMovimentacoes: TDataSource
+    DataSet = tbMovimentacoes
+    Left = 240
+    Top = 88
+  end
+  object tbMovProdutos: TFDTable
+    Active = True
+    AfterPost = tbMovProdutosAfterPost
+    BeforeDelete = tbMovProdutosBeforeDelete
+    AfterDelete = tbMovProdutosAfterDelete
+    IndexName = 'idmovimentacao'
+    MasterSource = dsMovimentacoes
+    MasterFields = 'id'
+    Connection = conexao
+    UpdateOptions.UpdateTableName = 'db_loja.movimentacoes_produtos'
+    TableName = 'db_loja.movimentacoes_produtos'
+    Left = 344
+    Top = 32
+    object tbMovProdutosid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ReadOnly = True
+    end
+    object tbMovProdutosidmovimentacao: TIntegerField
+      FieldName = 'idmovimentacao'
+      Origin = 'idmovimentacao'
+      Required = True
+    end
+    object tbMovProdutosidproduto: TIntegerField
+      FieldName = 'idproduto'
+      Origin = 'idproduto'
+      Required = True
+    end
+    object tbMovProdutosqtd: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'qtd'
+      Origin = 'qtd'
+    end
+    object tbMovProdutosnomeProduto: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nomeProduto'
+      LookupDataSet = tbProdutos
+      LookupKeyFields = 'id'
+      LookupResultField = 'nome'
+      KeyFields = 'idproduto'
+      Size = 50
+      Lookup = True
+    end
+  end
+  object dsMovProdutos: TDataSource
+    DataSet = tbMovProdutos
+    Left = 344
+    Top = 88
+  end
+  object sqlAumentaEstoque: TFDCommand
+    Connection = conexao
+    CommandText.Strings = (
+      
+        'UPDATE produtos SET estoqueAtual = estoqueAtual + pQtd WHERE id ' +
+        '= pId')
+    Left = 128
+    Top = 184
+  end
+  object sqlDiminuiEstoque: TFDCommand
+    Connection = conexao
+    CommandText.Strings = (
+      
+        'UPDATE produtos SET estoqueAtual = estoqueAtual - :pQtd WHERE id' +
+        ' = :pId')
+    ParamData = <
+      item
+        Name = 'pQtd'
+        ParamType = ptInput
+      end
+      item
+        Name = 'pId'
+        ParamType = ptInput
+      end>
+    Left = 136
+    Top = 248
+  end
+  object sqlMovimentacoes: TFDQuery
+    Active = True
+    Connection = conexao
+    SQL.Strings = (
+      'SELECT * FROM movimentacoes')
+    Left = 264
+    Top = 184
+  end
+  object dsSqlMovimentacoes: TDataSource
+    DataSet = sqlMovimentacoes
+    Left = 264
+    Top = 248
+  end
+end

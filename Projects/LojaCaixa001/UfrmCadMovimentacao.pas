@@ -30,6 +30,7 @@ type
     Label8: TLabel;
     Label9: TLabel;
     procedure DBNavigator1Click(Sender: TObject; Button: TNavigateBtn);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,6 +53,11 @@ begin
      begin
          DM.tbMovimentacoes.FieldByName('dataHora').Value := Now;
      end;
+end;
+
+procedure TfrmCadMovimentacao.FormShow(Sender: TObject);
+begin
+  DM.calcularTotais;
 end;
 
 end.
