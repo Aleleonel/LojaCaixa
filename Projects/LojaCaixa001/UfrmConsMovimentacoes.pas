@@ -21,6 +21,8 @@ type
     DBGrid2: TDBGrid;
     Label4: TLabel;
     lblTotal: TLabel;
+    procedure btConsultarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,5 +37,24 @@ implementation
 {$R *.dfm}
 
 uses UDM;
+
+procedure TfrmConsMovimentacoes.btConsultarClick(Sender: TObject);
+begin
+  DM.sqlMovimentacoes.Close;
+  DM.sqlMovimentacoes.SQL.Clear;
+  DM.sqlMovimentacoes.SQL.Text := 'SELECT * FROM movimentacoes WHERE Date(dataHora) BETWEEN :pDataInicial AND :pDataFinal';
+  DM.sqlMovimentacoes.ParamByName('pDataInicial').Value := FormatDateTime('YYYY-MM-DD', StrToDate(txtDataInicial.Text));
+  DM.sqlMovimentacoes.ParamByName('pDataFinal').Value := FormatDateTime('YYYY-MM-DD', StrToDate(txtDataFinal.Text));
+  DM.sqlMovimentacoes.Open;
+
+  lblTotal.Caption :=  IntToStr(DM.sqlMovimentacoes.RecordCount);
+end;
+
+procedure TfrmConsMovimentacoes.FormShow(Sender: TObject);
+begin
+  DM.sqlMovimentacoes.Refresh;
+  DM.sqlMovProdutos.Refresh;
+  lblTotal.Caption := IntToStr(DM.sqlMovimentacoes.RecordCount);
+end;
 
 end.

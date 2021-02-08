@@ -35,6 +35,11 @@ type
     tbProdutosestoqueAtual: TIntegerField;
     sqlMovProdutos: TFDQuery;
     dsSqlMovProdutos: TDataSource;
+    sqlMovProdutosid: TFDAutoIncField;
+    sqlMovProdutosidmovimentacao: TIntegerField;
+    sqlMovProdutosidproduto: TIntegerField;
+    sqlMovProdutosqtd: TIntegerField;
+    sqlMovProdutosnomeProduto: TStringField;
     procedure tbMovProdutosAfterPost(DataSet: TDataSet);
     procedure tbMovProdutosAfterDelete(DataSet: TDataSet);
     procedure calcularTotais;

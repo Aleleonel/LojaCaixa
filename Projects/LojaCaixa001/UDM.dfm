@@ -23,6 +23,7 @@ object DM: TDM
     object tbProdutosid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
+      ReadOnly = True
     end
     object tbProdutosnome: TStringField
       AutoGenerateValue = arDefault
@@ -151,6 +152,13 @@ object DM: TDM
       'SELECT * FROM movimentacoes')
     Left = 240
     Top = 176
+    ParamData = <
+      item
+        Name = 'pDataInicial'
+      end
+      item
+        Name = 'pDataFinal'
+      end>
   end
   object dsSqlMovimentacoes: TDataSource
     DataSet = sqlMovimentacoes
@@ -167,6 +175,36 @@ object DM: TDM
       'SELECT * FROM movimentacoes_produtos')
     Left = 376
     Top = 176
+    object sqlMovProdutosid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object sqlMovProdutosidmovimentacao: TIntegerField
+      FieldName = 'idmovimentacao'
+      Origin = 'idmovimentacao'
+      Required = True
+    end
+    object sqlMovProdutosidproduto: TIntegerField
+      FieldName = 'idproduto'
+      Origin = 'idproduto'
+      Required = True
+    end
+    object sqlMovProdutosqtd: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'qtd'
+      Origin = 'qtd'
+    end
+    object sqlMovProdutosnomeProduto: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nomeProduto'
+      LookupDataSet = tbProdutos
+      LookupKeyFields = 'id'
+      LookupResultField = 'nome'
+      KeyFields = 'idproduto'
+      Size = 50
+      Lookup = True
+    end
   end
   object dsSqlMovProdutos: TDataSource
     DataSet = sqlMovProdutos

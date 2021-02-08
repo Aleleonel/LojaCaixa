@@ -3,7 +3,7 @@ object frmConsMovimentacoes: TfrmConsMovimentacoes
   Top = 0
   Caption = 'Consulta de Movimenta'#231#245'es'
   ClientHeight = 521
-  ClientWidth = 697
+  ClientWidth = 882
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,6 +11,7 @@ object frmConsMovimentacoes: TfrmConsMovimentacoes
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Label4: TLabel
@@ -42,11 +43,11 @@ object frmConsMovimentacoes: TfrmConsMovimentacoes
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 697
+    Width = 882
     Height = 89
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 955
+    ExplicitWidth = 697
     object Label1: TLabel
       Left = 24
       Top = 28
@@ -64,11 +65,11 @@ object frmConsMovimentacoes: TfrmConsMovimentacoes
   object Panel2: TPanel
     Left = 0
     Top = 89
-    Width = 697
+    Width = 882
     Height = 64
     Align = alTop
     TabOrder = 1
-    ExplicitWidth = 719
+    ExplicitWidth = 697
     object Label2: TLabel
       Left = 24
       Top = 6
@@ -110,12 +111,13 @@ object frmConsMovimentacoes: TfrmConsMovimentacoes
       Height = 33
       Caption = 'Consultar Movimenta'#231#245'es'
       TabOrder = 2
+      OnClick = btConsultarClick
     end
   end
   object DBGrid1: TDBGrid
     Left = 24
     Top = 168
-    Width = 320
+    Width = 465
     Height = 289
     DataSource = DM.dsSqlMovimentacoes
     TabOrder = 2
@@ -134,7 +136,7 @@ object frmConsMovimentacoes: TfrmConsMovimentacoes
         Title.Font.Height = -11
         Title.Font.Name = 'Tahoma'
         Title.Font.Style = [fsBold]
-        Width = 93
+        Width = 139
         Visible = True
       end
       item
@@ -162,9 +164,9 @@ object frmConsMovimentacoes: TfrmConsMovimentacoes
       end>
   end
   object DBGrid2: TDBGrid
-    Left = 360
+    Left = 512
     Top = 168
-    Width = 320
+    Width = 353
     Height = 289
     DataSource = DM.dsSqlMovProdutos
     TabOrder = 3
@@ -176,22 +178,26 @@ object frmConsMovimentacoes: TfrmConsMovimentacoes
     Columns = <
       item
         Expanded = False
-        FieldName = 'id'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'idmovimentacao'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'idproduto'
+        FieldName = 'nomeProduto'
+        Title.Caption = 'PRODUTO'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 200
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'qtd'
+        Title.Caption = 'QUANTIDADE'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 115
         Visible = True
       end>
   end
